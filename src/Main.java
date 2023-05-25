@@ -5,6 +5,7 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
     }
 
     public static int[] generateRandomArray() {
@@ -21,7 +22,7 @@ public class Main {
         int[] arr = generateRandomArray();
         int sum = 0;
         for (int element : arr) {
-            sum = sum + element;
+            sum += element;
         }
         System.out.println("Сумма трат за месяц составила " + sum + " рублей.");
     }
@@ -31,16 +32,16 @@ public class Main {
         int[] arr = generateRandomArray();
         int minExpense = 0;
         int maxExpense = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > maxExpense) {
-                maxExpense = arr[i];
+        for (int elements : arr) {
+            if (elements > maxExpense) {
+                maxExpense = elements;
             }
-            if (arr[i] < minExpense) {
-                minExpense = arr[i];
+            if (elements < minExpense) {
+                minExpense = elements;
             }
         }
-            System.out.println("Максимальная сумма трат за день составила " + maxExpense + " рублей. Минимальная сумма трат за день составила " + minExpense + " рублей.");
-        }
+        System.out.println("Максимальная сумма трат за день составила " + maxExpense + " рублей. Минимальная сумма трат за день составила " + minExpense + " рублей.");
+    }
 
     public static void task3() {
         System.out.println("ЗАДАЧА 3");
@@ -48,11 +49,17 @@ public class Main {
         double averageSum = 0;
         double dayInMonth = 30;
         for (double element : arr) {
-            averageSum = averageSum + element/dayInMonth;
+            averageSum = averageSum + element / dayInMonth;
         }
         System.out.println("Средняя сумма трат за месяц составила " + averageSum + " рублей.");
     }
+
+    public static void task4() {
+        System.out.println("ЗАДАЧА 4");
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+                 System.out.print(reverseFullName[i]);
+        }
+    }
 }
-
-
 
