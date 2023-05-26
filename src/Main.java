@@ -30,8 +30,8 @@ public class Main {
     public static void task2() {
         System.out.println("ЗАДАЧА 2");
         int[] arr = generateRandomArray();
-        int minExpense = 0;
-        int maxExpense = 0;
+        int minExpense = 200_001;
+        int maxExpense = 99_000;
         for (int elements : arr) {
             if (elements > maxExpense) {
                 maxExpense = elements;
